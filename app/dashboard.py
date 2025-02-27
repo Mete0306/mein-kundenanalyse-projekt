@@ -10,12 +10,6 @@ def getKundenDaten():
 
     cursor = c.cursor()
 
-    # Prüfe, ob die Tabelle existiert
-    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='kunden';")
-    if not cursor.fetchone():
-        print("Tabelle 'kunden' existiert nicht!")
-        c.close()
-        return None  # Verhindert Fehler, falls die Tabelle nicht existiert
 
     daten= pd.read_sql("SELECT * FROM kunden ",c)
 
