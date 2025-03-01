@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
-
+import pickle
 dbName = "C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/database/kundenanalyse.db"
 
 
@@ -15,6 +15,9 @@ def getKundenDaten():
 
     c.close()
     return daten
+
+def vorhersage(alter,einkommen):
+    with open("models/ml_model.pkl", "rb") as f:
 
 st.title("📊 Kundenanalyse Dashboard")
 daten=getKundenDaten()
