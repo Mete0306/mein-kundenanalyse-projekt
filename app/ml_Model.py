@@ -9,7 +9,7 @@ class KundenanalyseML:
 
     def __init__(self):
         self.dbName="C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/database/kundenanalyse.db"
-        self.modellPfad="models/ml_model.pkl"
+        self.modellPfad="C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/models/ml_model.pkl"
         self.modell=None
 
     def ladeDaten(self):
@@ -35,7 +35,7 @@ class KundenanalyseML:
         self.modell.fit(xTrain,yTrain)
         print(f"Modell trainiert mit {len(xTrain)} Trainingsdaten")
 
-        self.speichereModell()
+        self.speichereModel()
 
     def speichereModel(self):
         if  self.modell is not None:
@@ -61,7 +61,5 @@ class KundenanalyseML:
         yVorhersage= self.modell.predict(eingabe)
 
         return yVorhersage[0]
-
-
 
 
