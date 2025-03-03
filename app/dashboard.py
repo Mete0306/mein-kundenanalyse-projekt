@@ -33,6 +33,7 @@ eingabeAlter = st.number_input("Alter", min_value=18, max_value=100, value=30)
 
 if st.button("Vorhersage treffen"):
     model= KundenanalyseML()
+    model.trainiereModel()
 
     vorhersage=model.vorhersage(eingabeEinkommen,eingabeAlter)
 
