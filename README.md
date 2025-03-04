@@ -12,7 +12,7 @@ Es analysiert Kundendaten aus einer SQLite-Datenbank und trifft **Vorhersagen** 
 
 ## 🚀 Live-Dashboard
 Nutze das Kundenanalyse-Dashboard ohne Installation direkt hier:  
-🔗 [Kundenanalyse-Dashboard](https://kundenanalyse.streamlit.app)
+🔗 [Kundenanalyse-Dashboard]([https://kundenanalyse.streamlit.app](https://mein-kundenanalyse-projekt-fedf8dym6prdqfqpaqj2m6.streamlit.app/)
 
 ## 🛠️ Installation
 
@@ -53,7 +53,16 @@ mein_kundenanalyse_projekt/
 │── requirements.txt          # Abhängigkeiten
 │── .gitignore                # Ignorierte Dateien
 ```
+## 🏃‍♂️ Anwendung starten
 
+### Datenbank aus CSV erstellen:
+python database/csvToDatabase.py
+
+### Dashboard starten:
+streamlit run app/dashboard.py
+
+
+Dashboard starten:
 ## 🛠 Technologien  
 📌 **Python**, **SQLite**, **Streamlit**, **Scikit-Learn**, **Pandas**
 
