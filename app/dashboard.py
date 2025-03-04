@@ -6,10 +6,7 @@ import os
 
 dbName = "C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/database/kundenanalyse.db"
 
-if not os.path.exists(dbName):
-    from mein_kundenanalyse_projekt.database.csvToDatabase import erstelleDatenbank, insertDatenVonCSV
-    erstelleDatenbank()
-    insertDatenVonCSV("data/kunden.csv")
+
 
 def getKundenDaten():
     c= sqlite3.connect(dbName)
