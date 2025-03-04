@@ -2,7 +2,10 @@ import sqlite3
 import pandas as pd
 import os
 
-dbName = "C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/database/kundenanalyse.db"
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Verzeichnis des Skripts
+dbName = os.path.join(BASE_DIR, "..", "database", "kundenanalyse.db")  # Relativer Pfad zur DB
 
 
 
@@ -32,7 +35,7 @@ def insertDatenVonCSV (csvPfad):
 
 if __name__ == "__main__":
     erstelleDatenbank()
-    insertDatenVonCSV("C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/data/kunden.csv")
+    insertDatenVonCSV(csvPfad = os.path.join(BASE_DIR, "..", "data", "kunden.csv"))
     print("Datenbank erstellt und CSV-Daten importiert!")
 
 

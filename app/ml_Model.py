@@ -5,13 +5,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.preprocessing import StandardScaler
-
+import os
 
 class KundenanalyseML:
 
 
     def __init__(self):
-        self.dbName="C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/database/kundenanalyse.db"
+
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        self.dbName = os.path.join(BASE_DIR, "..", "database", "kundenanalyse.db")
         self.modellPfad="C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/models/ml_model.pkl"
         self.scalerPfad = "C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/models/ml_scaler.pkl"
         self.modell=None

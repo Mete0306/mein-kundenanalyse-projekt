@@ -4,7 +4,10 @@ import sqlite3
 from ml_Model import KundenanalyseML
 import os
 
-dbName = "C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/database/kundenanalyse.db"
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Verzeichnis des Skripts
+dbName = os.path.join(BASE_DIR, "..", "database", "kundenanalyse.db")  # Relativer Pfad zur DB
 
 
 
