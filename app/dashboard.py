@@ -17,10 +17,10 @@ def getKundenDaten():
     cursor = c.cursor()
 
 
-    daten1= pd.read_sql("SELECT * FROM kunden ",c)
+    daten= pd.read_sql("SELECT * FROM kunden ",c)
 
     c.close()
-    return daten1
+    return daten
 
 
 
