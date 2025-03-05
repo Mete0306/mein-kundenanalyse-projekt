@@ -13,9 +13,10 @@ class KundenanalyseML:
     def __init__(self):
 
         BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        MODEL_DIR = os.path.join(BASE_DIR, "..", "models")
         self.dbName = os.path.join(BASE_DIR, "..", "database", "kundenanalyse.db")
-        self.modellPfad="C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/models/ml_model.pkl"
-        self.scalerPfad = "C:/Users/Metehan Yigiter/PycharmProjects/mein_erstesProjekt/mein_kundenanalyse_projekt/models/ml_scaler.pkl"
+        self.modellPfad = os.path.join(MODEL_DIR, "ml_model.pkl")
+        self.scalerPfad = os.path.join(MODEL_DIR, "ml_scaler.pkl")
         self.modell=None
         self.scaler=None
 
