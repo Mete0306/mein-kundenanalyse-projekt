@@ -12,7 +12,7 @@ Es analysiert Kundendaten aus einer SQLite-Datenbank und trifft **Vorhersagen** 
 
 ## 🚀 Live-Dashboard
 Nutze das Kundenanalyse-Dashboard ohne Installation direkt hier:  
-🔗 [Kundenanalyse-Dashboard]([https://kundenanalyse.streamlit.app](https://mein-kundenanalyse-projekt-fedf8dym6prdqfqpaqj2m6.streamlit.app/)
+🔗 ([https://kundenanalyse.streamlit.app](https://mein-kundenanalyse-projekt-fedf8dym6prdqfqpaqj2m6.streamlit.app/)
 
 ## 🛠️ Installation & Nutzung
 
