@@ -14,29 +14,58 @@ Es analysiert Kundendaten aus einer SQLite-Datenbank und trifft **Vorhersagen** 
 Nutze das Kundenanalyse-Dashboard ohne Installation direkt hier:  
 🔗 [Kundenanalyse-Dashboard]([https://kundenanalyse.streamlit.app](https://mein-kundenanalyse-projekt-fedf8dym6prdqfqpaqj2m6.streamlit.app/)
 
-## 🛠️ Installation
+## 🛠️ Installation & Nutzung
 
-### 1.Repository klonen
+### 🚀 1. Projekt herunterladen
 
-git clone https://github.com/Mete0306/mein_kundenanalyse_projekt.git
-cd mein_kundenanalyse_projekt
+Methode 1: Mit Git (Empfohlen)
 
-### 2.Virtuelle Umgebung erstellen und aktivieren
+Falls du Git installiert hast, kannst du das Repository mit folgendem Befehl klonen:
 
-python -m venv .venv
-source .venv/bin/activate  # macOS & Linux
-.venv\Scripts\activate    # Windows
+**git clone https://github.com/dein-github-account/mein-kundenanalyse-projekt.git**
+**cd mein-kundenanalyse-projekt**
 
-### 3.Benötigte Abhängigkeiten installieren
-pip install -r requirements.txt
-```
+Methode 2: Manuell herunterladen
+
+Falls du kein Git hast, kannst du das Repository als ZIP-Datei von GitHub herunterladen und entpacken.Dann öffnest du ein Terminal oder eine Eingabeaufforderung in dem entpackten Projektordner.
+
+
+### 📞 2. Abhängigkeiten installieren
+
+Installiere alle benötigten Pakete aus der Datei requirements.txt:
+
+**pip install -r requirements.txt**
+
+Falls Fehler auftreten, stelle sicher, dass du pip auf dem neuesten Stand hast:
+
+**pip install --upgrade pip**
+
+### 📂 4. Datenbank erstellen (falls nicht vorhanden)
+
+Falls die SQLite-Datenbank kundenanalyse.db noch nicht existiert, erstelle sie mit:
+
+**python database/csvToDatabase.py**
+
+✅ Danach sollten die Kundendaten aus data/kunden.csv in die Datenbank importiert sein.
+
+#### 🏃‍♂️ 5. Dashboard starten
+
+Das Dashboard basiert auf Streamlit und kann mit folgendem Befehl gestartet werden:
+
+**streamlit run app/dashboard.py**
+
+Nach ein paar Sekunden öffnet sich die Kundenanalyse-Webapp im Browser unter:
+
+http://localhost:8501
+
+Falls es nicht automatisch öffnet, klicke auf den Link in der Konsole.
 
 ## 🐂 Projektstruktur 
 
 mein_kundenanalyse_projekt/
 │── app/
 │   ├── dashboard.py          # Streamlit-Dashboard
-│   ├── ml_Model.py           # Machine-Learning-Modelle
+│   ├── ml_Model.py           # Machine-Learning-Modell
 │
 │── data/
 │   ├── kunden.csv            # Kundendaten
@@ -53,13 +82,7 @@ mein_kundenanalyse_projekt/
 │── requirements.txt          # Abhängigkeiten
 │── .gitignore                # Ignorierte Dateien
 ```
-## 🏃‍♂️ Anwendung starten
 
-### Datenbank aus CSV erstellen:
-python database/csvToDatabase.py
-
-### Dashboard starten:
-streamlit run app/dashboard.py
 
 
 Dashboard starten:
