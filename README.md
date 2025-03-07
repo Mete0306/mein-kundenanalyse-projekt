@@ -84,8 +84,6 @@ mein_kundenanalyse_projekt/
 ```
 
 
-
-Dashboard starten:
 ## 🛠 Technologien  
 📌 **Python**, **SQLite**, **Streamlit**, **Scikit-Learn**, **Pandas**
 
